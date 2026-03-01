@@ -87,12 +87,12 @@ main {
         a {
             text-decoration: none;
             color: white;
-            font-size: 20px;   
+            font-size: 20px;
         }
 
-         li a:hover {
-        color: var(--accent);
-      }
+        li a:hover {
+            color: var(--accent);
+        }
 
 
         .btn1 {
@@ -370,7 +370,7 @@ main {
 
     section.view3 {
         width: 100%;
-        height: 100%;
+        height: auto;
         margin-bottom: 10rem;
 
 
@@ -495,7 +495,8 @@ main {
 section.view4 {
     width: 100%;
     padding: 4rem 2rem;
-   background-color: transparent;
+    background-color: transparent;
+    margin-top: 10vw;
 
     .testimonial-container {
         max-width: 1200px;
@@ -582,7 +583,7 @@ section.view4 {
     @media (max-width: 480px) {
 
         padding: 2.4rem 1rem;
-        margin-top: 36rem;
+        margin-top: 10vw;
 
         .testimonial-container {
             .testimonial-heading .title {
@@ -613,6 +614,7 @@ section.view4 {
     // Small mobile: compact spacing and typography
     @media (max-width: 360px) {
         padding: 1.2rem 0.8rem;
+        margin-top: -34vw;
 
         .testimonial-container {
             .testimonial-heading .title {
@@ -694,6 +696,20 @@ section.view4 {
 
 /* Small mobile: up to 360px */
 @media (max-width: 360px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    html,
+    body {
+        max-width: 100%;
+    }
+
+    main {
+        overflow-x: hidden;
+    }
+
     main nav {
         padding: 0.6rem 0.6rem;
     }
@@ -714,16 +730,54 @@ section.view4 {
         font-size: 0.88rem;
     }
 
-    section.view3 .work-container .heading .title {
-        font-size: 20px !important;
-        margin-bottom: 1.2rem;
+    main section.view2 .feature .feature_card1 {
+        max-width: 330px;
+        height: 400px;
     }
 
-    section.view3 .content {
-        height: auto !important;
-        width: 100% !important;
+
+    main section.view2 .feature .feature_card2 .card {
+        max-width: 300px;
+        height: 187px;
     }
+
+    .view3,
+    .view3 * {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .view3 {
+
+        min-height: 100vh !important;
+    }
+
+    .view3 .working-steps {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        position: relative !important;
+        height: auto !important;
+    }
+
+
+    .view3.no-hover,
+    .view3.no-hover * {
+        transform: none !important;
+        /* cancel all transforms */
+        transition: none !important;
+        /* cancel animation */
+        box-shadow: none !important;
+        /* cancel shadow */
+        pointer-events: none !important;
+        /* block clicks and hover */
+    }
+
 }
+
+
 
 /* Mobile: 361 - 480px */
 @media (max-width: 480px) {

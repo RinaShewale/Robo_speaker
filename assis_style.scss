@@ -18,11 +18,11 @@ body {
 }
 
 body::-moz-selection {
-    color: #d22855;
+  color: #d22855;
 }
 
 body::selection {
-    color: #d22855;
+  color: #d22855;
 }
 
 
@@ -94,7 +94,7 @@ main {
       position: absolute;
       inset: -28% 0% auto 50%;
       width: 440px;
-      height: 350px;
+      height: 173px;
       background-color: var(--primary);
       border-radius: 466px;
       filter: blur(150px);
@@ -555,7 +555,12 @@ main {
   .chat-container .input-container input {
     font-size: 0.95rem;
   }
+
+  main .main-content .chat-container .input-container {
+    margin-top: 18rem;
+  }
 }
+
 
 /* ========== RESPONSIVE FOR 480px DEVICES ========== */
 @media (max-width: 480px) {
@@ -614,16 +619,17 @@ main {
     }
 
     .main-content {
+      width: 100%;
       padding: 1rem;
 
       .chat-container {
-        width: min(96vw, 380px);
+        width: 100%;
         padding: 1.4rem 0.8rem 2.4rem;
 
         .animated-mic {
           width: 70px;
           height: 70px;
-          margin-top: 16rem;
+          margin-top: 10rem;
 
           &::before {
             width: 120px;
@@ -642,7 +648,7 @@ main {
         }
 
         .input-container {
-          margin-top: 13rem;
+          margin-top: 18rem;
 
           input {
             font-size: 0.9rem;

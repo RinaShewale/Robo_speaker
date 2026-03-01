@@ -23,6 +23,29 @@ navItems.forEach(link => {
 });
 
 
+const elements = document.querySelectorAll('.view3 *');
+
+elements.forEach(el => {
+  // Disable pointer events completely
+  el.style.pointerEvents = 'none';
+
+  // Remove all transform, scale, shadow effects
+  el.style.transform = 'none';
+  el.style.transition = 'none';
+  el.style.boxShadow = 'none';
+
+  // Remove hover via JS
+  el.addEventListener('mouseenter', e => {
+    e.stopPropagation();
+    el.style.transform = 'none';
+    el.style.boxShadow = 'none';
+    el.style.transition = 'none';
+  });
+
+  // Prevent clicks
+  el.addEventListener('click', e => e.preventDefault());
+});
+
 
 const heroHeading = document.querySelector(".view1 h1");
 const heroPara = document.querySelector(".view1 p");
