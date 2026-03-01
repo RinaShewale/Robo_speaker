@@ -199,4 +199,124 @@ nav .menu-toggle i {
     padding: 12px 16px;
     margin-top: 12px;
   }
+}
+@media (max-width: 480px) {
+  nav {
+    padding: 12px 5%;
+  }
+  nav .logo img {
+    width: 11rem;
+    margin-left: -1.5rem;
+  }
+  nav ul {
+    padding-top: 100px;
+    padding-left: 20px;
+    gap: 1.2rem;
+  }
+  nav .btn1 a button {
+    width: 70%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  nav .menu-toggle i {
+    font-size: 24px;
+  }
+  .feature-cards,
+  .support-cards {
+    gap: 20px;
+  }
+  .feature-cards .feature-card,
+  .feature-cards .support-card,
+  .support-cards .feature-card,
+  .support-cards .support-card {
+    width: 220px;
+    padding: 20px;
+  }
+  .feature-cards .feature-card h3,
+  .feature-cards .support-card h3,
+  .support-cards .feature-card h3,
+  .support-cards .support-card h3 {
+    font-size: 1.1rem;
+  }
+  .feature-cards .feature-card p,
+  .feature-cards .support-card p,
+  .support-cards .feature-card p,
+  .support-cards .support-card p {
+    font-size: 0.85rem;
+  }
+  .feature-cards .feature-card i,
+  .feature-cards .support-card i,
+  .support-cards .feature-card i,
+  .support-cards .support-card i {
+    font-size: 32px;
+  }
+  .ellips {
+    width: 380px;
+    height: 300px;
+    inset: -30% 0% auto 50%;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin: 40px 0 15px;
+  }
+}
+@media (max-width: 360px) {
+  nav {
+    padding: 10px 4%;
+  }
+  nav .logo img {
+    width: 10rem;
+    margin-left: -1rem;
+  }
+  nav ul {
+    padding-top: 90px;
+    padding-left: 16px;
+    gap: 1rem;
+  }
+  nav .btn1 a button {
+    width: 80%;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  nav .menu-toggle i {
+    font-size: 22px;
+  }
+  .feature-cards,
+  .support-cards {
+    gap: 15px;
+  }
+  .feature-cards .feature-card,
+  .feature-cards .support-card,
+  .support-cards .feature-card,
+  .support-cards .support-card {
+    width: 200px;
+    padding: 15px;
+  }
+  .feature-cards .feature-card h3,
+  .feature-cards .support-card h3,
+  .support-cards .feature-card h3,
+  .support-cards .support-card h3 {
+    font-size: 1rem;
+  }
+  .feature-cards .feature-card p,
+  .feature-cards .support-card p,
+  .support-cards .feature-card p,
+  .support-cards .support-card p {
+    font-size: 0.8rem;
+  }
+  .feature-cards .feature-card i,
+  .feature-cards .support-card i,
+  .support-cards .feature-card i,
+  .support-cards .support-card i {
+    font-size: 28px;
+  }
+  .ellips {
+    width: 320px;
+    height: 250px;
+    inset: -35% 0% auto 50%;
+  }
+  .section-title {
+    font-size: 1.6rem;
+    margin: 30px 0 10px;
+  }
 }/*# sourceMappingURL=Pages.css.map */

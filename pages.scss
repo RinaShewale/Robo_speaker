@@ -216,3 +216,130 @@ nav {
     margin-top: 12px;
   }
 }
+
+
+// ================= SMALL MOBILE MEDIA QUERIES =================
+
+// Small tablets / large mobiles: up to 480px
+@media (max-width: 480px) {
+  nav {
+    padding: 12px 5%;
+
+    .logo img {
+      width: 11rem;
+      margin-left: -1.5rem;
+    }
+
+    ul {
+      padding-top: 100px;
+      padding-left: 20px;
+      gap: 1.2rem;
+    }
+
+    .btn1 a button {
+      width: 70%;
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+
+    .menu-toggle i {
+      font-size: 24px;
+    }
+  }
+
+  .feature-cards,
+  .support-cards {
+    gap: 20px;
+
+    .feature-card,
+    .support-card {
+      width: 220px;
+      padding: 20px;
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .ellips {
+    width: 380px;
+    height: 300px;
+    inset: -30% 0% auto 50%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin: 40px 0 15px;
+  }
+}
+
+// Extra small mobiles: up to 360px
+@media (max-width: 360px) {
+  nav {
+    padding: 10px 4%;
+
+    .logo img {
+      width: 10rem;
+      margin-left: -1rem;
+    }
+
+    ul {
+      padding-top: 90px;
+      padding-left: 16px;
+      gap: 1rem;
+    }
+
+    .btn1 a button {
+      width: 80%;
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+
+    .menu-toggle i {
+      font-size: 22px;
+    }
+  }
+
+  .feature-cards,
+  .support-cards {
+    gap: 15px;
+
+    .feature-card,
+    .support-card {
+      width: 200px;
+      padding: 15px;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      i {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .ellips {
+    width: 320px;
+    height: 250px;
+    inset: -35% 0% auto 50%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin: 30px 0 10px;
+  }
+}
