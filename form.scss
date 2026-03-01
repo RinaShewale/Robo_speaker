@@ -1,0 +1,131 @@
+:root {
+  --primary: #af133d;
+  --primary-hover: #ca1a49;
+  --primary-dark: #950a2f;
+  --accent: #cf204f;
+  --secondary: #1c1b1b28;
+  --border-color: #c1385c68;
+  --gray: #313030;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.form-container {
+  background: rgba(28, 27, 27, 0.8);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 5px var(--primary-dark);
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: var(--primary);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--primary-hover);
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    color: #aaa;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-weight: 500;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+
+    &:focus {
+      border-color: var(--primary-hover);
+      box-shadow: 0 0 10px var(--primary-hover);
+    }
+  }
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 0 15px var(--primary);
+  }
+}
+
+.redirect {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-hover);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
