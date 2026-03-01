@@ -15,6 +15,14 @@ body {
   margin: 0;
   padding: 0;
 }
+body::-moz-selection {
+    color: #d22855;
+}
+
+body::selection {
+    color: #d22855;
+}
+
 
 nav {
   display: flex;
