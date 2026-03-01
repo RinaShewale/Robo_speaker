@@ -52,13 +52,15 @@ nav .btn1 a {
   display: inline-block;
 }
 nav .btn1 a button {
-  padding: 10px 16px;
+  padding: 10px 5px;
+  width: 120px;
   border-radius: 20px;
   border: none;
   background: white;
   color: #000;
   cursor: pointer;
   font-weight: 600;
+  font-size: 15px;
 }
 nav .menu-toggle {
   display: none;

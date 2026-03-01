@@ -57,18 +57,20 @@ nav {
       display: inline-block;
 
       button {
-        padding: 10px 16px;
+        padding: 10px 5px;
+        width: 120px;
         border-radius: 20px;
         border: none;
         background: white;
         color: #000;
         cursor: pointer;
         font-weight: 600;
+        font-size: 15px;
       }
     }
   }
 
-  
+
 
   .menu-toggle {
     display: none;
@@ -81,19 +83,19 @@ nav {
   }
 }
 
- .ellips {
-            position: absolute;
-            inset: -28% 0% auto 50%;
-            width: 440px;
-            height: 350px;
-            background-color: var(--primary);
-            border-radius: 466px;
-            filter: blur(150px);
-            opacity: 0.5;
-            transform: translateX(-50%);
-            z-index: 1; // behind everything
-            pointer-events: none; // won't block clicks
-        }
+.ellips {
+  position: absolute;
+  inset: -28% 0% auto 50%;
+  width: 440px;
+  height: 350px;
+  background-color: var(--primary);
+  border-radius: 466px;
+  filter: blur(150px);
+  opacity: 0.5;
+  transform: translateX(-50%);
+  z-index: 1; // behind everything
+  pointer-events: none; // won't block clicks
+}
 
 /* Prevent scroll when mobile menu open */
 .no-scroll {
@@ -169,7 +171,7 @@ nav {
     right: -50%;
     width: 50%;
     height: 100vh;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(6px);
     flex-direction: column;
     justify-content: flex-start;
