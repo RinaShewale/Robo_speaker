@@ -368,8 +368,8 @@ main section.view3 .work-container .working-steps .upright {
 }
 main section.view3 .work-container .working-steps .top {
   position: absolute;
-  top: 15%;
-  left: 40%;
+  top: 5%;
+  left: 37%;
   transform: translate(-10%, -25%);
 }
 main section.view3 .work-container .working-steps .top:hover {
