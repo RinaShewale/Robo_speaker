@@ -560,10 +560,6 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
 }
 /* Small mobile: up to 360px */
 @media (max-width: 360px) {
-  html,
-  body {
-    max-width: 100%;
-  }
   main {
     overflow-x: hidden;
   }
