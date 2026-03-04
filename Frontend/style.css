@@ -560,9 +560,6 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
 }
 /* Small mobile: up to 360px */
 @media (max-width: 360px) {
-  body {
-    overflow-x: hidden;
-  }
   html,
   body {
     max-width: 100%;
@@ -578,25 +575,34 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   }
   .view1 {
     padding: 1.6rem 0.8rem;
+    margin-left: -2px;
   }
   .text {
     width: 30rem;
   }
   .text h1 {
-    font-size: 35px !important;
-    white-space: nowrap;
+    font-size: 1.8rem !important;
+    /* 35px cha jagi 1.8rem use kara */
+    line-height: 1.2;
+    white-space: normal;
+    /* nowrap remove kara */
+    text-align: center;
   }
   .text p {
-    font-size: 14px !important;
-    font-weight: 400;
+    font-size: 0.85rem !important;
+    /* thoda chhota kara */
+    line-height: 1.4;
+    text-align: center;
   }
   main section.view2 .feature .feature_card1 {
     max-width: 330px;
     height: 400px;
   }
   main section.view2 .feature .feature_card2 .card {
-    max-width: 300px;
-    height: 187px;
+    width: 100% !important;
+    max-width: 320px;
+    /* screen la fit */
+    height: auto !important;
   }
   .view3,
   .view3 * {
@@ -614,6 +620,12 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
     gap: 2rem !important;
     position: relative !important;
     height: auto !important;
+  }
+  section.view3 .content {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0.8rem;
   }
   .view3 .content:hover {
     transform: none !important;
@@ -666,9 +678,11 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   }
   main nav .menu-toggle {
     display: block;
+    margin-right: -7px;
   }
   .view1 {
     padding: 2rem 1rem;
+    margin-left: -2px;
   }
   .view1 h1 {
     font-size: 20px;
@@ -685,6 +699,9 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
     flex-direction: column;
     gap: 14px;
   }
+  .view2 {
+    margin-left: 0px;
+  }
   .view2 .feature {
     flex-direction: column;
     gap: 18px;
@@ -695,7 +712,8 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   .feature_card1,
   .feature_card2 {
     width: 100%;
-    height: auto;
+    max-width: 400px;
+    margin-left: -16px;
   }
   .feature_card2 .card {
     width: 100%;
