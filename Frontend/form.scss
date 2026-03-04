@@ -1,11 +1,14 @@
 :root {
-  --primary: #af133d;
-  --primary-hover: #ca1a49;
-  --primary-dark: #950a2f;
-  --accent: #cf204f;
-  --secondary: #1c1b1b28;
-  --border-color: #c1385c68;
-  --gray: #313030;
+
+    --primary: #4c1D3D;
+    --primary-hover: #7c2e4b;
+    --primary-dark: #A33757;
+    --accent: #DC586D;
+    --secondary: #FB9590;
+    --border-color: #e2a079;
+    --button: #EEEEEE;
+
+
 }
 
 body {
@@ -21,7 +24,7 @@ body {
 }
 
 
-.signup {
+.signup,.login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +38,6 @@ body {
   border-radius: 20px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 0 5px var(--primary-dark);
   text-align: center;
   position: relative;
 
@@ -57,7 +59,7 @@ body {
   h2 {
     margin-bottom: 1rem;
     font-weight: 700;
-    color: var(--primary-hover);
+    color: var(--primary-dark);
   }
 
   p {
@@ -82,7 +84,7 @@ body {
     width: 100%;
     padding: 0.65rem 0.75rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-hover);
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
     font-size: 1rem;

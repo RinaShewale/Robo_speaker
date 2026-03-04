@@ -1,12 +1,28 @@
 @charset "UTF-8";
 :root {
-  --primary: #af133d;
-  --primary-hover: #ca1a49;
-  --primary-dark: #950a2f;
-  --accent: #cf204f;
-  --secondary: #1c1b1b28;
-  --border-color: #c1385c68;
-  --gray: #313030;
+  --primary: #4c1D3D;
+  --primary-hover: #7c2e4b;
+  --primary-dark: #A33757;
+  --accent: #DC586D;
+  --secondary: #FB9590;
+  --border-color: #e2a079;
+  --button: #EEEEEE;
+  --ellipse-gradient: linear-gradient(circle at center,
+      var(--primary),
+      var(--primary-dark),
+      var(--primary-hover));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -19,11 +35,11 @@ body {
 }
 
 body::-moz-selection {
-  color: #d22855;
+  color: var(--primary-hover);
 }
 
 body::selection {
-  color: #d22855;
+  color: var(--primary-hover);
 }
 
 main {
@@ -83,10 +99,10 @@ main nav .btn1 button:active {
 }
 main nav .ellips {
   position: absolute;
-  inset: -28% 0% auto 50%;
+  inset: -176% 0% auto 50%;
   width: 440px;
   height: 173px;
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   border-radius: 466px;
   filter: blur(150px);
   opacity: 0.5;
@@ -108,7 +124,7 @@ main .main-content {
   padding: 2rem 1rem;
 }
 main .main-content .chat-container {
-  height: 65vh;
+  height: 75vh;
   width: min(92vw, 420px);
   background: linear-gradient(180deg, rgba(20, 20, 20, 0.9), rgba(12, 12, 12, 0.95));
   border-radius: 14px;
@@ -140,7 +156,7 @@ main .main-content .chat-container .animated-mic::before {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(202, 26, 73, 0.5), rgba(175, 19, 61, 0.05));
+  background: radial-gradient(circle at 30% 30%, var(--primary-dark), var(--ellipse-gradient), var(--primary-dark) 60%, transparent 80%);
   animation: ripple-wave 3s cubic-bezier(0.4, 0, 0.6, 1) infinite, glow-shift 4s ease-in-out infinite;
   z-index: 1;
   box-shadow: 0 0 30px rgba(207, 32, 79, 0.3);
@@ -221,8 +237,18 @@ main .main-content .input-container {
   gap: 0.6rem;
   align-items: center;
   position: relative;
-  margin-top: 9.75rem;
+  margin-top: 8rem;
   padding-top: 1.5rem;
+}
+main .main-content .input-container .info-text {
+  font-size: 13px;
+  margin: 8px 0;
+  color: white;
+}
+main .main-content .input-container .lang-select {
+  display: none;
+  margin-top: 8px;
+  padding: 5px;
 }
 main .main-content .input-container input[type=text] {
   flex: 1;
@@ -475,6 +501,7 @@ main .main-content .input-container .mic-btn:hover {
   main nav img {
     width: 40vw;
     height: auto;
+    margin-left: -32px;
   }
   main nav ul {
     display: none;
@@ -506,6 +533,8 @@ main .main-content .input-container .mic-btn:hover {
   }
   main nav .menu-toggle {
     display: block;
+    margin-right: -8px;
+    font-size: 25px;
   }
   main .main-content {
     width: 100%;

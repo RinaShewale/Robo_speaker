@@ -2,13 +2,19 @@
 
 :root {
 
-    --primary: #0A2647;
-    --primary-hover: #144272;
-    --primary-dark: #205295;
-    --accent: #2C74B3;
-    --secondary: #1c1b1b28;
-    --border-color: #5386b4;
-    --button:#EEEEEE;
+    --primary: #4c1D3D;
+    --primary-hover: #7c2e4b;
+    --primary-dark: #A33757;
+    --accent: #DC586D;
+    --secondary: #FB9590;
+    --border-color: #e2a079;
+    --button: #EEEEEE;
+
+
+    --ellipse-gradient: radial-gradient(circle at center,
+            var(--primary),
+            var(--primary-dark),
+            var(--primary-hover));
 
 }
 
@@ -37,11 +43,11 @@ body {
 }
 
 body::-moz-selection {
-    color: #d22855;
+    color: var(--primary-hover);
 }
 
 body::selection {
-    color: #d22855;
+    color: var(--primary-hover);
 }
 
 main {
@@ -91,7 +97,7 @@ main {
         }
 
         li a:hover {
-            color: var(--accent);
+            color: var(--primary-hover);
         }
 
 
@@ -122,10 +128,10 @@ main {
 
         .ellips {
             position: absolute;
-            inset: -28% 0% auto 50%;
-            width: 440px;
+            inset: -176% 0% auto 50%;
+            width: 540px;
             height: 350px;
-            background-color: var(--primary);
+            background: var(--ellipse-gradient);
             border-radius: 466px;
             filter: blur(150px);
             opacity: 0.5;
@@ -183,6 +189,8 @@ main {
 
 
             .trybtn {
+                background-color: var(--button);
+                color: black;
                 padding: 10px 15px;
                 width: 150px;
                 border-radius: 20px;
@@ -196,7 +204,7 @@ main {
             }
 
             .trybtn:hover {
-                background-color: var(--primary-hover);
+                background-color: var(--primary-dark);
                 color: white;
             }
 
@@ -253,12 +261,12 @@ main {
             .feature_card1 {
                 width: 400px;
                 height: 400px;
-                background-color: var(--secondary);
+                background-color: transparent;
                 margin-left: 0;
                 text-align: left;
                 padding: 20px;
                 border-radius: 20px;
-                border: 2px solid var(--border-color);
+                border: 2px solid var(--primary-hover);
                 transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
                 position: relative;
                 overflow: hidden;
@@ -285,7 +293,7 @@ main {
                     border-radius: 50%;
                     cursor: pointer;
                     transition: transform 0.2s ease-in-out;
-                    background-color: var(--accent);
+                    background-color: var(--primary-dark);
                     box-shadow: 0px 0px 30px var(--primary-dark);
                     color: #ffffff;
                     border: none;
@@ -334,7 +342,7 @@ main {
                     background-color: #1c1b1b28;
                     padding: 20px;
                     border-radius: 20px;
-                    border: 2px solid var(--border-color);
+                    border: 2px solid var(--primary-hover);
                     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 
 
@@ -408,7 +416,6 @@ main {
                 .content {
                     width: 25vw;
                     height: 16vw;
-                    background: var(--gray);
                     border-radius: 2rem;
                     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
                     padding: 1.5rem;
@@ -418,11 +425,11 @@ main {
                     justify-content: center;
                     align-items: center;
                     backdrop-filter: blur(10px); // glass effect
-                    background: rgba(255, 255, 255, 0.1);
+                    background: #1f1e1e;
 
                     h2 i {
                         font-size: 3rem;
-                        background: linear-gradient(45deg, var(--primary-hover), var(--border-color)); // icon gradient
+                        background: linear-gradient(45deg, var(--primary-hover), var(--secondary), var(--primary-hover)); // icon gradient
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         margin-bottom: 0.8rem;
@@ -440,7 +447,7 @@ main {
                 }
 
                 .content:hover {
-                    transform: translateY(-10%) !important;
+                    transform: translateY(-10%);
                 }
 
                 // Positioning
@@ -460,13 +467,12 @@ main {
                     position: absolute;
                     top: 5%;
                     left: 37%;
-                    transform: translate(-10%, -25%) ;
+                    transform: translate(-10%, -25%);
                 }
 
                 .top:hover {
-                    transform: translate(-10%, -25%) translateY(-10%) !important;
+                    transform: translate(-10%, -25%) translateY(-10%);
                 }
-
 
                 .downleft {
                     position: absolute;
@@ -523,12 +529,12 @@ section.view4 {
             flex-wrap: wrap;
 
             .testimonial-card {
-                background: #262525;
+                background: #1f1e1e;
                 padding: 1.8rem;
                 border-radius: 14px;
                 width: 340px;
                 min-width: 260px;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
                 transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
                 display: flex;
                 flex-direction: column;
@@ -551,7 +557,7 @@ section.view4 {
 
                 &:hover {
                     transform: translateY(-8px);
-                    box-shadow: 0 20px 10px var(--primary-dark);
+                    box-shadow: 0 10px 5px var(--primary-hover);
                     border-color: rgba(175, 19, 61, 0.18);
                 }
             }
@@ -624,6 +630,7 @@ section.view4 {
             .testimonial-cards {
                 .testimonial-card {
                     padding: 0.9rem;
+                    max-height: 178px;
 
                     p {
                         font-size: 0.9rem;
@@ -722,12 +729,19 @@ section.view4 {
         padding: 1.6rem 0.8rem;
     }
 
-    .view1 h1 {
-        font-size: 1.6rem;
-    }
+    .text {
+        width: 30rem;
 
-    .view1 p {
-        font-size: 0.88rem;
+
+        h1 {
+            font-size: 35px !important;
+            white-space: nowrap;
+        }
+
+        p {
+            font-size: 14px !important;
+            font-weight: 400;
+        }
     }
 
     main section.view2 .feature .feature_card1 {
@@ -762,17 +776,12 @@ section.view4 {
         height: auto !important;
     }
 
-
-    .view3.no-hover,
-    .view3.no-hover * {
+    .view3 .content:hover {
         transform: none !important;
-        /* cancel all transforms */
-        transition: none !important;
-        /* cancel animation */
-        box-shadow: none !important;
-        /* cancel shadow */
-        pointer-events: none !important;
-        /* block clicks and hover */
+    }
+
+    .view3 .top:hover {
+        transform: none !important;
     }
 
 }
@@ -836,15 +845,17 @@ section.view4 {
     }
 
     .view1 h1 {
-        font-size: 2rem;
+        font-size: 20px;
         line-height: 1.2;
         text-align: center;
+
     }
 
     .view1 p {
-        font-size: 0.95rem;
+        font-size: 15px;
         line-height: 1.6;
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .view1 .btn2 {
@@ -1089,14 +1100,7 @@ section.view4 {
         height: 300px !important;
     }
 
-    section.view3 .upleft,
-    section.view3 .upright,
-    section.view3 .top,
-    section.view3 .downleft,
-    section.view3 .downright {
-        position: static !important; // 🔥 static kara relative nako
-        transform: none !important;
-    }
+
 }
 
 

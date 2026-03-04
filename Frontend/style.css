@@ -1,12 +1,16 @@
 /* ================= ROOT COLORS ================= */
 :root {
-  --primary: #af133d;
-  --primary-hover: #ca1a49;
-  --primary-dark: #950a2f;
-  --accent: #cf204f;
-  --secondary: #1c1b1b28;
-  --border-color: #c1385c68;
-  --gray: #313030;
+  --primary: #4c1D3D;
+  --primary-hover: #7c2e4b;
+  --primary-dark: #A33757;
+  --accent: #DC586D;
+  --secondary: #FB9590;
+  --border-color: #e2a079;
+  --button: #EEEEEE;
+  --ellipse-gradient: radial-gradient(circle at center,
+          var(--primary),
+          var(--primary-dark),
+          var(--primary-hover));
 }
 
 * {
@@ -31,11 +35,11 @@ body.no-scroll {
 }
 
 body::-moz-selection {
-  color: #d22855;
+  color: var(--primary-hover);
 }
 
 body::selection {
-  color: #d22855;
+  color: var(--primary-hover);
 }
 
 main {
@@ -77,7 +81,7 @@ main nav a {
   font-size: 20px;
 }
 main nav li a:hover {
-  color: var(--accent);
+  color: var(--primary-hover);
 }
 main nav .btn1 {
   display: flex;
@@ -98,10 +102,10 @@ main nav .btn1 button:active {
 }
 main nav .ellips {
   position: absolute;
-  inset: -28% 0% auto 50%;
-  width: 440px;
+  inset: -176% 0% auto 50%;
+  width: 540px;
   height: 350px;
-  background-color: var(--primary);
+  background: var(--ellipse-gradient);
   border-radius: 466px;
   filter: blur(150px);
   opacity: 0.5;
@@ -147,6 +151,8 @@ main section.view1 .btn2 {
   margin-top: 3vw;
 }
 main section.view1 .btn2 .trybtn {
+  background-color: var(--button);
+  color: black;
   padding: 10px 15px;
   width: 150px;
   border-radius: 20px;
@@ -158,7 +164,7 @@ main section.view1 .btn2 button:active {
   scale: 0.97;
 }
 main section.view1 .btn2 .trybtn:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--primary-dark);
   color: white;
 }
 main section.view1 .btn2 .learn {
@@ -205,12 +211,12 @@ main section.view2 .feature {
 main section.view2 .feature .feature_card1 {
   width: 400px;
   height: 400px;
-  background-color: var(--secondary);
+  background-color: transparent;
   margin-left: 0;
   text-align: left;
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--primary-hover);
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
   position: relative;
   overflow: hidden;
@@ -235,7 +241,7 @@ main section.view2 .feature .feature_card1 .feature_btn {
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  background-color: var(--accent);
+  background-color: var(--primary-dark);
   box-shadow: 0px 0px 30px var(--primary-dark);
   color: #ffffff;
   border: none;
@@ -275,7 +281,7 @@ main section.view2 .feature .feature_card2 .card {
   background-color: rgba(28, 27, 27, 0.1568627451);
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--primary-hover);
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 main section.view2 .feature .feature_card2 .card h4 {
@@ -326,7 +332,6 @@ main section.view3 .work-container .working-steps {
 main section.view3 .work-container .working-steps .content {
   width: 25vw;
   height: 16vw;
-  background: var(--gray);
   border-radius: 2rem;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
   padding: 1.5rem;
@@ -336,11 +341,11 @@ main section.view3 .work-container .working-steps .content {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
+  background: #1f1e1e;
 }
 main section.view3 .work-container .working-steps .content h2 i {
   font-size: 3rem;
-  background: linear-gradient(45deg, var(--primary-hover), var(--border-color));
+  background: linear-gradient(45deg, var(--primary-hover), var(--secondary), var(--primary-hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.8rem;
@@ -354,7 +359,7 @@ main section.view3 .work-container .working-steps .content p {
   line-height: 1.3rem;
 }
 main section.view3 .work-container .working-steps .content:hover {
-  transform: translateY(-10%) !important;
+  transform: translateY(-10%);
 }
 main section.view3 .work-container .working-steps .upleft {
   position: absolute;
@@ -373,7 +378,7 @@ main section.view3 .work-container .working-steps .top {
   transform: translate(-10%, -25%);
 }
 main section.view3 .work-container .working-steps .top:hover {
-  transform: translate(-10%, -25%) translateY(-10%) !important;
+  transform: translate(-10%, -25%) translateY(-10%);
 }
 main section.view3 .work-container .working-steps .downleft {
   position: absolute;
@@ -416,12 +421,12 @@ section.view4 .testimonial-container .testimonial-cards {
   flex-wrap: wrap;
 }
 section.view4 .testimonial-container .testimonial-cards .testimonial-card {
-  background: #262525;
+  background: #1f1e1e;
   padding: 1.8rem;
   border-radius: 14px;
   width: 340px;
   min-width: 260px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
   display: flex;
   flex-direction: column;
@@ -442,7 +447,7 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card h3 {
 }
 section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 10px var(--primary-dark);
+  box-shadow: 0 10px 5px var(--primary-hover);
   border-color: rgba(175, 19, 61, 0.18);
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -495,6 +500,7 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   }
   section.view4 .testimonial-container .testimonial-cards .testimonial-card {
     padding: 0.9rem;
+    max-height: 178px;
   }
   section.view4 .testimonial-container .testimonial-cards .testimonial-card p {
     font-size: 0.9rem;
@@ -573,11 +579,16 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   .view1 {
     padding: 1.6rem 0.8rem;
   }
-  .view1 h1 {
-    font-size: 1.6rem;
+  .text {
+    width: 30rem;
   }
-  .view1 p {
-    font-size: 0.88rem;
+  .text h1 {
+    font-size: 35px !important;
+    white-space: nowrap;
+  }
+  .text p {
+    font-size: 14px !important;
+    font-weight: 400;
   }
   main section.view2 .feature .feature_card1 {
     max-width: 330px;
@@ -604,16 +615,11 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
     position: relative !important;
     height: auto !important;
   }
-  .view3.no-hover,
-  .view3.no-hover * {
+  .view3 .content:hover {
     transform: none !important;
-    /* cancel all transforms */
-    transition: none !important;
-    /* cancel animation */
-    box-shadow: none !important;
-    /* cancel shadow */
-    pointer-events: none !important;
-    /* block clicks and hover */
+  }
+  .view3 .top:hover {
+    transform: none !important;
   }
 }
 /* Mobile: 361 - 480px */
@@ -665,14 +671,15 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
     padding: 2rem 1rem;
   }
   .view1 h1 {
-    font-size: 2rem;
+    font-size: 20px;
     line-height: 1.2;
     text-align: center;
   }
   .view1 p {
-    font-size: 0.95rem;
+    font-size: 15px;
     line-height: 1.6;
     text-align: center;
+    margin-bottom: 30px;
   }
   .view1 .btn2 {
     flex-direction: column;
@@ -863,14 +870,6 @@ section.view4 .testimonial-container .testimonial-cards .testimonial-card:hover 
   section.view3 .content {
     width: 80vw !important;
     height: 300px !important;
-  }
-  section.view3 .upleft,
-  section.view3 .upright,
-  section.view3 .top,
-  section.view3 .downleft,
-  section.view3 .downright {
-    position: static !important;
-    transform: none !important;
   }
 }
 /* ================= FOOTER ================= */

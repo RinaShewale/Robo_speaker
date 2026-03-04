@@ -1,11 +1,17 @@
 :root {
-  --primary: #af133d;
-  --primary-hover: #ca1a49;
-  --primary-dark: #950a2f;
-  --accent: #cf204f;
-  --secondary: #1c1b1b28;
-  --border-color: #c1385c68;
-  --gray: #1e1c1cbc;
+  --primary: #4c1D3D;
+  --primary-hover: #7c2e4b;
+  --primary-dark: #A33757;
+  --accent: #DC586D;
+  --secondary: #FB9590;
+  --border-color: #e2a079;
+  --button: #EEEEEE;
+  --ellipse-gradient: linear-gradient(
+      circle at center,
+      var(--primary),
+      var(--primary-dark),
+      var(--primary-hover)
+  );
 }
 
 body {
@@ -81,10 +87,10 @@ nav .menu-toggle i {
 
 .ellips {
   position: absolute;
-  inset: -28% 0% auto 50%;
+  inset: -176% 0% auto 50%;
   width: 440px;
   height: 350px;
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   border-radius: 466px;
   filter: blur(150px);
   opacity: 0.5;
@@ -116,7 +122,7 @@ nav .menu-toggle i {
 .feature-cards .support-card,
 .support-cards .feature-card,
 .support-cards .support-card {
-  background: var(--gray);
+  background: #1f1e1e;
   border-radius: 12px;
   padding: 25px;
   width: 250px;
