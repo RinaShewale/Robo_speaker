@@ -589,8 +589,7 @@ section.view4 {
     @media (max-width: 480px) {
 
         padding: 2.4rem 1rem;
-        margin-top: -10vw;
-        margin-left: 30px;
+        margin-top: 10vw;
 
         .testimonial-container {
             .testimonial-heading .title {
@@ -603,7 +602,6 @@ section.view4 {
 
                 .testimonial-card {
                     width: 100%;
-                    max-height: 200px;
                     padding: 1.2rem;
 
                     p {
@@ -706,9 +704,14 @@ section.view4 {
 /* Small mobile: up to 360px */
 @media (max-width: 360px) {
 
+    body {
+        overflow-x: hidden;
+    }
 
-
-
+    html,
+    body {
+        max-width: 100%;
+    }
 
     main {
         overflow-x: hidden;
@@ -722,46 +725,40 @@ section.view4 {
         width: 10rem;
     }
 
-
     .view1 {
         padding: 1.6rem 0.8rem;
-        margin-left: -2px;
     }
 
     .text {
-        width: 30rem;
+        width: 90%;
+        max-width: 700px; // for larger screens
+        margin: 0 auto;
 
 
         h1 {
-            font-size: 1.8rem !important;
-            /* 35px cha jagi 1.8rem use kara */
-            line-height: 1.2;
-            white-space: normal;
-            /* nowrap remove kara */
-            text-align: center;
+            font-size: 35px !important;
+            white-space: nowrap;
         }
 
         p {
-            font-size: 0.85rem !important;
-            /* thoda chhota kara */
-            line-height: 1.4;
-            text-align: center;
+            font-size: 14px !important;
+            font-weight: 400;
         }
     }
 
-    main section.view2 .feature .feature_card1 {
-        max-width: 330px;
-        height: 400px;
+    main section.view2 .feature .feature_card1,
+    .feature_card2 {
+        width: 100%; // container control karayla
+        max-width: 400px;
+        height: auto;
     }
+
 
 
     main section.view2 .feature .feature_card2 .card {
-        width: 100% !important;
-        max-width: 320px;
-        /* screen la fit */
-        height: auto !important;
+        max-width: 300px;
+        height: 187px;
     }
-
 
     .view3,
     .view3 * {
@@ -784,13 +781,6 @@ section.view4 {
         height: auto !important;
     }
 
-    section.view3 .content {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 0.8rem;
-    }
-
     .view3 .content:hover {
         transform: none !important;
     }
@@ -802,12 +792,92 @@ section.view4 {
 }
 
 
+@media (min-width: 361px) and (max-width: 480px) {
+    .view1 {
+        padding: 1.5rem;
+        margin-left: 30px;
+    }
+
+    .view1 .text {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .view1 h1 {
+        font-size: 1.6rem;
+    }
+
+    .view1 p {
+        font-size: 0.85rem;
+    }
+
+    main section.view2 {
+        margin-left: 30px;
+    }
+
+    main section.view2 .feature .feature_card1 {
+        width: 100%; // container control karayla
+        max-width: 400px;
+        height: auto;
+    }
+
+
+
+    main section.view2 .feature .feature_card2 .card {
+        max-width: 300px;
+        height: 187px;
+        margin-left: 20px;
+    }
+
+
+
+    .view3 {
+        margin-left: 28px;
+
+        min-height: 100vh !important;
+    }
+
+    .view3 .working-steps {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+        position: relative !important;
+        height: auto !important;
+    }
+
+    .view3 .content:hover {
+        transform: none !important;
+    }
+
+    .view3 .top:hover {
+        transform: none !important;
+    }
+
+
+    section.view4 {
+        padding: 2.4rem 1rem;
+        margin-top: -21vw;
+        margin-left: 33px;
+    }
+
+
+    section.view4 .testimonial-container .testimonial-cards .testimonial-card {
+        width: 100%;
+        padding: 1.2rem;
+        max-height: fit-content;
+    }
+
+     footer {
+        padding: 2rem 1rem;
+        margin-left: 35px;
+    }
+
+}
 
 
 /* Mobile: 361 - 480px */
 @media (max-width: 480px) {
-
-
     main nav {
         position: relative;
         padding: 0.8rem 1rem;
@@ -856,12 +926,10 @@ section.view4 {
 
     main nav .menu-toggle {
         display: block;
-        margin-right: -39px;
     }
 
     .view1 {
         padding: 2rem 1rem;
-        margin-left: 25px;
     }
 
     .view1 h1 {
@@ -883,12 +951,7 @@ section.view4 {
         gap: 14px;
     }
 
-    .view2 {
-        margin-left: 25px;
-    }
-
     .view2 .feature {
-
         flex-direction: column;
         gap: 18px;
         align-items: center;
@@ -899,8 +962,7 @@ section.view4 {
     .feature_card1,
     .feature_card2 {
         width: 100%;
-        max-width: 400px;
-        margin-left: -4px;
+        height: auto;
     }
 
     .feature_card2 .card {
@@ -914,7 +976,6 @@ section.view4 {
     section.view3 .work-container {
         height: auto !important;
         padding: 1rem;
-        margin-left: 30px;
     }
 
     section.view3 .work-container .heading .title {
@@ -1220,37 +1281,34 @@ footer {
     // Responsive
     @media (max-width: 768px) {
         padding: 2rem 1rem;
-        max-width: 27rem;
-        margin-left: 34px;
-    }
 
-    .footer-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-inner .links {
-        gap: 1rem;
-
-        ul {
+        .footer-inner {
+            flex-direction: column;
             align-items: center;
+            text-align: center;
+        }
+
+        .footer-inner .links {
+            gap: 1rem;
+
+            ul {
+                align-items: center;
+            }
+        }
+
+        .footer-inner .brand p {
+            max-width: 100%;
+        }
+
+        .footer-container {
+            padding: 1rem 0;
+        }
+
+        .footer-logo img {
+            width: 180px;
         }
     }
-
-    .footer-inner .brand p {
-        max-width: 100%;
-    }
-
-    .footer-container {
-        padding: 1rem 0;
-    }
-
-    .footer-logo img {
-        width: 180px;
-    }
 }
-
 
 /* legacy footer container structure */
 footer .footer-container {
